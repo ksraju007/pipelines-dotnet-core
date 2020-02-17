@@ -34,6 +34,7 @@ steps:
   inputs:
     action: 'createSecret'
     kubernetesServiceConnection: 'k8sconn1'
+    namespace: 'default'
     secretType: 'dockerRegistry'
     secretName: 'k8ssecret'
     dockerRegistryEndpoint: 'dockerconn1'
@@ -42,4 +43,5 @@ steps:
     action: 'deploy'
     kubernetesServiceConnection: 'k8sconn1'
     manifests: 'k8s/template.yaml'
-    rolloutStatusTimeout: '240'
+    imagePullSecrets: 'k8ssecret'
+    rolloutStatusTimeout: '120'
