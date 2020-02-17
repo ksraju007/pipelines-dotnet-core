@@ -25,7 +25,7 @@ steps:
 - task: Docker@2
   displayName: buildAndPush
   inputs:
-    containerRegistry: 'piraidemo'
+    containerRegistry: 'dockerconn'
     repository: 'pirai/dockerhub'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
