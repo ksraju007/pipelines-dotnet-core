@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demoapp
-        image: piraidemo/testimage
+        image: piraidemo/testimage:latest
         ports:
         - containerPort: 80
         resources:
