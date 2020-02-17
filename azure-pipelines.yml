@@ -42,3 +42,4 @@ steps:
     kubernetesServiceConnection: 'k8sconn1'
     manifests: 'k8s/template.yaml'
     imagePullSecrets: '$(k8ssecret)'
+    rolloutStatusTimeout: '60'
