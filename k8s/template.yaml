@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demoapp
-        image: piraidemo.azurecr.io/piraidemo/testimage:latest
+        image: piraidemo.azurecr.io/piraidemo/testimage
         ports:
         - containerPort: 80
         resources:
