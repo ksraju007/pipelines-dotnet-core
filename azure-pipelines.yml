@@ -29,6 +29,7 @@ steps:
     repository: 'pirai/testimage'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
+    tags: 'latest'
 - task: KubernetesManifest@0
   inputs:
     action: 'createSecret'
