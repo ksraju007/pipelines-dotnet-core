@@ -29,3 +29,8 @@ steps:
     repository: 'pirai/testimage'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'k8sconn1'
+    manifests: 'k8s/manifest.yaml'
