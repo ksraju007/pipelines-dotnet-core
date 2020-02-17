@@ -42,6 +42,8 @@ steps:
   inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'k8sconn1'
+    namespace: 'default'
     manifests: 'k8s/template.yaml'
-    imagePullSecrets: '$(k8ssecret)'
+    containers: 'piraidemo.azurecr.io/piraidemo/testimage:latest'
+    imagePullSecrets: 'k8ssecret'
     rolloutStatusTimeout: '120'
