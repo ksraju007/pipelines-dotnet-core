@@ -33,4 +33,4 @@ steps:
   inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'k8sconn1'
-    manifests: 'k8s/manifest.yaml'
+    manifests: 'k8s/template.yaml'
