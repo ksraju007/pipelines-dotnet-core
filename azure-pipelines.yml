@@ -22,3 +22,10 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     OverWrite: true
+- task: Docker@2
+  displayName: buildAndPush
+  inputs:
+    containerRegistry: 'piraidemo'
+    repository: 'pirai/dockerhub'
+    command: 'buildAndPush'
+    Dockerfile: 'Dockerfile'
