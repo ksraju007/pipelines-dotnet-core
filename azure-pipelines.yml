@@ -31,6 +31,14 @@ steps:
     Dockerfile: 'Dockerfile'
 - task: KubernetesManifest@0
   inputs:
+    action: 'createSecret'
+    kubernetesServiceConnection: 'k8sconn1'
+    secretType: 'dockerRegistry'
+    secretName: 'k8ssecret'
+    dockerRegistryEndpoint: 'dockerconn1'
+- task: KubernetesManifest@0
+  inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'k8sconn1'
     manifests: 'k8s/template.yaml'
+    imagePullSecrets: '$(k8ssecret)'
